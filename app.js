@@ -6,6 +6,9 @@ var burger = document.querySelector(".burger");
 var mobileToggleButton = document.querySelector(".has-sub-menu i");
 var closeNavbarIcon = document.querySelector(".close");
 
+var transBackground = document.querySelector(".trans-background");
+
+
 console.log(screenWidth);
 
 if(screenWidth > 993){
@@ -20,6 +23,7 @@ if(screenWidth > 993){
     burger.addEventListener('click', function(){
         this.classList.toggle("active");
         navMenu.classList.toggle("active");
+        transBackground.classList.toggle("active");
     });
     mobileToggleButton.addEventListener('click', function(){
         this.parentElement.classList.toggle("active");
@@ -28,6 +32,13 @@ if(screenWidth > 993){
     closeNavbarIcon.addEventListener('click', function(){
         navMenu.classList.toggle("active");
         burger.classList.toggle("active");
+        transBackground.classList.toggle("active");
+    });
+    transBackground.addEventListener('click', function(){
+        this.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        burger.classList.toggle("active");
+
     });
 }
 
